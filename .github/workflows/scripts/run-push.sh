@@ -35,7 +35,7 @@ _get_CLI(){
   file="${DOT_CLI_HOME}${DOT_CLI_JAR}" && \
       actual_size=$(wc -c <"$file");
 
-  if [ "$actual_size" -lt 1000000 ]; then
+  if [ "$actual_size" -lt 100000 ]; then
     echo "The file is too small to be the CLI, please check the version and try again"
     exit 1
   fi
