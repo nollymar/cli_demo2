@@ -74,8 +74,7 @@ _setup_CLI(){
 
 print_log(){
   echo "Quarkus log file contents:"
-  echo "$(ls -la $DOT_CLI_HOME)"
-  echo "$(ls -la $DOT_REPO_BASE_PATH)"
+  echo "$(ls -la $HOME/.dotcms/)"
   cat "$QUARKUS_LOG_FILE_PATH"
 }
 
