@@ -35,7 +35,7 @@ _get_CLI(){
   file="${DOT_CLI_HOME}${DOT_CLI_JAR}" && \
       actual_size=$(wc -c <"$file");
 
-  if [ "$actual_size" -lt 100000 ]; then
+  if [ "$actual_size" -lt 1000000 ]; then
     echo "The file is too small to be the CLI, please check the version and try again"
     exit 1
   fi
@@ -74,7 +74,6 @@ _setup_CLI(){
 
 print_log(){
   echo "Quarkus log file contents:"
-  echo "$(ls -la $HOME/.dotcms/)"
   cat "$QUARKUS_LOG_FILE_PATH"
 }
 
