@@ -18,6 +18,7 @@ jobs:
       DOT_CLI_JAR_DOWNLOAD_URL: ${{ vars.DOT_CLI_JAR_DOWNLOAD_URL || 'https://repo.dotcms.com/artifactory/libs-snapshot-local/com/dotcms/dotcms-cli/1.0.0-SNAPSHOT/dotcms-cli-1.0.0-20231002.205953-1.jar' }}
       # In case we want to force the download of the CLI jar
       DOT_FORCE_DOWNLOAD: ${{ vars.DOT_FORCE_DOWNLOAD || 'false' }}
+      QUARKUS_LOG_FILE_PATH: ${{ vars.QUARKUS_LOG_FILE_PATH }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
