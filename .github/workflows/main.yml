@@ -59,6 +59,7 @@ jobs:
 
       - name: Get changes
         run: |
+          git fetch origin
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }} > changed_files.txt
 
       - name: List changed files
